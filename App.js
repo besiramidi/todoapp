@@ -65,12 +65,12 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 40,
-    backgroundColor: 'pink',
+    backgroundColor: 'white',
     flex: 1,
   },
   list: {
     flex: 1,
     marginTop: 20,
-    backgroundColor: 'yellow',
+    backgroundColor: 'white',
   }
 });

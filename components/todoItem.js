@@ -1,11 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text , TouchableOpacity,} from 'react-native';
+import { StyleSheet, Text , TouchableOpacity, View,} from 'react-native';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+
 
 export default function TodoItem({ item, pressHandler }) {
 
     return(
      <TouchableOpacity onPress={() => pressHandler(item.key)}>
-         <Text style={styles.item}>{item.text}</Text>
+         <View style={styles.item}>
+             <FontAwesome5 name='trash' size={18} color='#333'/>
+            <Text style={styles.itemText}>{item.text}</Text>
+         </View>
      </TouchableOpacity>
 
     )
@@ -20,5 +25,9 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderStyle: 'dashed',
         borderRadius: 10,
+        flexDirection: 'row',
+    },
+    itemText: {
+        marginLeft: 10,
     }
 })
